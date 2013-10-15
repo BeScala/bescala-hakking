@@ -31,8 +31,8 @@ class ProcessorTest extends FunSpec with Matchers {
   def demand: List[GeometricObject] = List(
     GeometricObject(Circle, Blue, Glass, 10),
     GeometricObject(Circle, Blue, Glass, 10),
-    GeometricObject(Circle, Blue, Metal, 20.1),
-    GeometricObject(Circle, Blue, Paper, 12.1)
+    GeometricObject(Circle, Blue, Metal, 20),
+    GeometricObject(Circle, Blue, Paper, 12)
   )
 
   def offers = Map(1 -> offer1, 2 -> offer2, 3 -> offer3)
@@ -41,8 +41,8 @@ class ProcessorTest extends FunSpec with Matchers {
     List(
       GeometricObjectQuote(GeometricObject(Circle, Blue, Glass, 10), 3),
       GeometricObjectQuote(GeometricObject(Circle, Blue, Glass, 10), 5),
-      GeometricObjectQuote(GeometricObject(Circle, Blue, Paper, 12.1), 0.30),
-      GeometricObjectQuote(GeometricObject(Circle, Blue, Metal, 20.1), 8)
+      GeometricObjectQuote(GeometricObject(Circle, Blue, Paper, 12), 0.30),
+      GeometricObjectQuote(GeometricObject(Circle, Blue, Metal, 20), 8)
     )
 
 
