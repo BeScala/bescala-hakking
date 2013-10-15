@@ -11,7 +11,7 @@ object ProcessorActor {
   case class DemandMessage(demand: List[GeometricObject], offersMap: Map[Int, List[GeometricObjectQuote]])
 }
 
-class ProcessorActor(offersList: List[GeometricObjectQuote]) extends Actor {
+class ProcessorActor extends Actor {
   import ProcessorActor._
 
   
