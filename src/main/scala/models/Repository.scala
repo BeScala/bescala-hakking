@@ -15,7 +15,7 @@ object RepositoryBig extends Repository {
     } yield GeometricObject(shape, color, material, area)
 
 
-  def offers(num:Int) = Map(
+  def offers(num:Int = 10) = Map(
     1 -> offer1(num),
     2 -> offer2(num),
     3 -> offer3(num),
