@@ -6,15 +6,17 @@ import models.GeometricObjectQuote
 import models.GeometricObject
 import utils.Processor
 
+
 object ProcessorActor {
-  case class DemandMessage(demand: List[GeometricObject])
+  case class DemandMessage(demand: List[GeometricObject], offersMap: Map[Int, List[GeometricObjectQuote]])
 }
 
-class ProcessorActor(offersMap: Map[Int, List[GeometricObjectQuote]]) extends Actor {
+class ProcessorActor(offersList: List[GeometricObjectQuote]) extends Actor {
   import ProcessorActor._
+
   
   def receive = {
-    case DemandMessage(demand) => {
+    case DemandMessage(demand, offersMap) => {
       val resultOpt = Processor.findBestQuotes(demand, offersMap)
       
       sender ! resultOpt
