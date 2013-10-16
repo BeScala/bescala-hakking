@@ -27,7 +27,7 @@ object ProcessorMain {
     
     val result = Await.result(resultfuture, 5 seconds).asInstanceOf[Option[Result]]
     
-    result.map{r => println(r)}
+    result.map{ r => r.print(println) }
     
     system.shutdown
     system.awaitTermination
