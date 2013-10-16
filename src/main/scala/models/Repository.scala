@@ -25,14 +25,14 @@ object RepositoryBig extends Repository {
   def offer1(num:Int) =
     for {
       shape <- Shape.values
-      color <- Color.values if Seq(Red, Black, Blue).contains(color)
+      color <- Seq(Red, Black, Blue)
       material <- Material.values
       area <- 1 to num
     } yield GeometricObjectQuote(GeometricObject(shape, color, material, area), area * 0.02)
 
   def offer2(num:Int) =
     for {
-      shape <- Shape.values if Seq(Circle, Rectangle, Triangle, Ellipse).contains(shape)
+      shape <- Seq(Circle, Rectangle, Triangle, Ellipse)
       color <- Color.values
       material <- Material.values
       area <- 1 to num
@@ -42,7 +42,7 @@ object RepositoryBig extends Repository {
     for {
       shape <- Shape.values
       color <- Color.values
-      material <- Material.values if Seq(Paper, Plastic, Ceramic).contains(material)
+      material <- Seq(Paper, Plastic, Ceramic)
       area <- 1 to num
     } yield GeometricObjectQuote(GeometricObject(shape, color, material, area), area * 0.02)
 
