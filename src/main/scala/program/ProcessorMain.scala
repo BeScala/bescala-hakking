@@ -21,6 +21,14 @@ object ProcessorMain {
     
     val system = ActorSystem("Processor")
     
+    val processorActor = system.actorOf(Props[ProcessorActor], "processoractor")
+    
+    val resultfuture = processorActor ? DemandMessage(demand(0), offers(1))
+    
+    val result = Await.result(resultfuture, 5 seconds).asInstanceOf[Option[Result]]
+    
+    result.map{ r => r.print(println) }
+    
     system.shutdown
     system.awaitTermination
   }
