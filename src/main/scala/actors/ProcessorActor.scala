@@ -1,7 +1,6 @@
 package actors
 
 import akka.actor.Actor
-import akka.actor.Props
 import models.GeometricObjectQuote
 import models.GeometricObject
 import utils.Processor

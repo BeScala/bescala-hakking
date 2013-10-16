@@ -77,4 +77,16 @@ case class Result(selection: List[GeometricObjectQuote] = List(),
   val totalSelectionPrice = selection.map(_.price).sum
   val totalRestPrice = rest.map(_.price).sum
   val totalPrice = totalSelectionPrice + totalRestPrice
+
+  def print(f: (String) => Unit) : Unit = {
+    f(s"total price $totalPrice")
+
+    f(s"total selection $totalSelectionPrice")
+    f(s"selection size ${selection.size}")
+
+    f(s"total rest $totalRestPrice")
+    f(s"rest size ${rest.size}")
+
+    f(s"offers is ${offersMap.keys.mkString(", ")}")
+  }
 }
