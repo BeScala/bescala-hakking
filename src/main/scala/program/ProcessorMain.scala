@@ -6,7 +6,6 @@ import akka.actor.Props
 import scala.concurrent.duration._
 import scala.concurrent.Await
 import akka.pattern.ask
-import actors.ProcessorActor
 import models.RepositorySmall
 import akka.util.Timeout
 import utils.Result
@@ -14,7 +13,7 @@ import utils.Result
 object ProcessorMain {
 
   def main(args: Array[String]): Unit = {
-    import ProcessorActor._
+    
     import RepositorySmall._
     
     implicit val timeout = Timeout(5 seconds)
