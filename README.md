@@ -12,7 +12,7 @@ A geometric object consist of:
 - A shape    - Square, Rectangle, Circle, Triangle and Ellipse
 - A color    - Red, Orange, Yellow, Green, Blue, White and Black 
 - A material - Glass, Wood, Metal, Paper, Plastic and Ceramic
-- An area    - area is expressed on cm2. It can goes from from 1cm2 up to 100cm2 
+- An area    - area is expressed on cm2. It can go from from 1cm2 up to 100cm2 
 
 Suppliers can respond with offers. Each offer has one or more (generally a couple of thousands) quotes for geometric objects. A quote consist of a GeometricObject and a price (in euro).
 
